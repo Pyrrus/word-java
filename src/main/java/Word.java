@@ -26,6 +26,10 @@ public class Word {
     return mDefinition;
   }
 
+  public void addDefinition(Definition info) {
+  	mDefinition.add(info);
+  }
+
   public static List<Word> all(){
     return words;
   }
