@@ -48,7 +48,7 @@ public class WordTest{
   }
 
   @Test
-  public void find_returnsCorrectSquad () {
+  public void find_returnsCorrectWord () {
     Word word = new Word("Bob");
     Word otherword = new Word("Q");
     assertEquals(Word.find(otherword.getId()), otherword);
