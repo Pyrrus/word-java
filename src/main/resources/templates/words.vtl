@@ -4,7 +4,7 @@
 #end
 
 #if ($words.size() != 0)
-  <ul>
+  <ul class="big">
     #foreach ($word in $words)
       <li><a href="word/$word.getId()"> $word.getWord()</a></li>
     #end
