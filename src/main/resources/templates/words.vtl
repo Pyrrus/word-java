@@ -3,14 +3,14 @@
   <h3 class="successfully">Word added successfully!</h3>
 #end
 
-#if ($words)
+#if ($words.size() != 0)
   <ul>
     #foreach ($word in $words)
-      <li><a href="squad/$squad.getId()"> $squad.getWord()</a></li>
+      <li><a href="word/$word.getId()"> $word.getWord()</a></li>
     #end
   </ul>
 #else
   <p>No Words</p>
-  <a class="btn btn-primary" href="/word/new">Add New Word</a>
 #end
 
+<a class="btn btn-primary" href="/word/new">Add New Word</a>

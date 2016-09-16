@@ -22,7 +22,7 @@ public class App {
     get("/word", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/words.vtl");
-      model.put("title", "Wordzilla list");
+      model.put("title", "Wordzilla: Word List");
       model.put("words", Word.all());
       model.put("header", header);
       return new ModelAndView(model, layout);
@@ -31,7 +31,7 @@ public class App {
     post("/word", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/words.vtl");
-      model.put("title", "Wordzilla list");
+      model.put("title", "Wordzilla: Word List");
       model.put("words", Word.all());
       String name = request.queryParams("name");
       Word word = new Word(name);
@@ -42,16 +42,16 @@ public class App {
     
     get("/word/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/index.vtl");
-      model.put("title", "Wordzilla");
+      model.put("template", "templates/word-new-form.vtl");
+      model.put("title", "Add new word for Wordzilla");
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("/word/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/index.vtl");
-      model.put("title", "Wordzilla");
+      model.put("template", "templates/word.vtl");
+      model.put("title", "Wordzilla: "+ word.getWord() + " meaning");
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -59,7 +59,7 @@ public class App {
     get("/word/:id/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
-      model.put("title", "Wordzilla");
+      model.put("title", "Wordzilla: "+ word.getWord() + " add meaning");
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
