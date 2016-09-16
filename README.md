@@ -9,7 +9,7 @@ This site will make words up and make the definitions up for the each of the wor
 
 ## Specifications
 
-#### /word/new page
+#### '/word/new' page
 
 user input                | output
 ------------------------- | -------------
@@ -20,7 +20,7 @@ user input                | output
 click on the "submit" button | This will make the word given by the user. The site will send them to the "/word" page. Also, site will give the successfully save and add it in the list of words.
 
 
-#### /word/:id/new page (:id for the what word you are working on) for example /word/1/new for example
+#### '/word/:id/new' page (:id for the what word you are working on) for example /word/1/new for example
 
 user input                | output
 ------------------------- | -------------
