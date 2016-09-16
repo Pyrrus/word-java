@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordTest{
+public class WordTest {
   @After
   public void tearDown() {
     Word.clear();
@@ -42,20 +42,20 @@ public class WordTest{
   }
 
   @Test
-  public void getId_returnsId () {
-   Word word = new Word("Bob");
-   assertEquals(1, word.getId());
+  public void getId_returnsId() {
+    Word word = new Word("Bob");
+    assertEquals(1, word.getId());
   }
 
   @Test
-  public void find_returnsCorrectWord () {
+  public void find_returnsCorrectWord() {
     Word word = new Word("Bob");
     Word otherword = new Word("Q");
     assertEquals(Word.find(otherword.getId()), otherword);
   }
 
   @Test
-  public void All_returnsAll () {
+  public void All_returnsAll() {
     Word word = new Word("Bob");
     Word otherword = new Word("Q");
     assertTrue(Word.all().contains(word));
@@ -63,10 +63,9 @@ public class WordTest{
   }
 
   @Test
-  public void clear_clearsList () {
+  public void clear_clearsList() {
     Word word = new Word("Bob");
     Word.clear();
     assertEquals(0, Word.all().size());
   }
-
 }

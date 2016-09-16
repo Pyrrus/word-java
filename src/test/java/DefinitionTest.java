@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DefinitionTest{
+public class DefinitionTest {
   @Test
   public void Definition_instantiatesCorrectly() {
     Definition definition = new Definition("Bob", "work");
