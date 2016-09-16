@@ -1,0 +1,16 @@
+<h1>List of Words</h1>
+#if($post)
+  <h3 class="successfully">Word added successfully!</h3>
+#end
+
+#if ($words)
+  <ul>
+    #foreach ($word in $words)
+      <li><a href="squad/$squad.getId()"> $squad.getWord()</a></li>
+    #end
+  </ul>
+#else
+  <p>No Words</p>
+  <a class="btn btn-primary" href="/word/new">Add New Word</a>
+#end
+
