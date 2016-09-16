@@ -1,6 +1,7 @@
 <h1>$word.getWord()</h1>
 
 #foreach ($info in $word.getDefinition())
+	<p><em>$info.getType()</em></p>
 	<p><stong>$info.getDefintion()</stong></p>
 #end
 

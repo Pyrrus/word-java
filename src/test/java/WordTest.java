@@ -36,7 +36,7 @@ public class WordTest{
   @Test
   public void getDefinition_sizeIncreasesWhenDefinitionAdded() {
     Word word = new Word("Bob");
-    Definition info = new Definition("person name");
+    Definition info = new Definition("person name", "bob");
     word.addDefinition(info);
     assertEquals(1, word.getDefinition().size());
   }

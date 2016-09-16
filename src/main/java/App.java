@@ -78,8 +78,9 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Word word = Word.find(Integer.parseInt(request.params(":id")));
       String meaning = request.queryParams("info");
+      String type = request.queryParams("type");
       System.out.println(meaning);
-      Definition info = new Definition(meaning);
+      Definition info = new Definition(meaning, type);
       word.addDefinition(info);
       model.put("template", "templates/word-info.vtl");
       model.put("title", "Wordzilla: "+ word.getWord() + " meaning");
