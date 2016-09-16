@@ -1,0 +1,7 @@
+<h1>$word.getWord()</h1>
+
+#foreach ($info in $word.getDefinition())
+	<p><stong>$info.getDefintion()</stong></p>
+#end
+
+<a class="btn btn-info" href=/word/$word.getId()/new">Add Defintion to $word.getWord()</a>

@@ -50,16 +50,20 @@ public class App {
 
     get("/word/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/word.vtl");
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("template", "templates/word-info.vtl");
       model.put("title", "Wordzilla: "+ word.getWord() + " meaning");
+      model.put("word", word);
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
     get("/word/:id/new", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      model.put("template", "templates/index.vtl");
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      model.put("template", "templates/word-info-new.vtl");
       model.put("title", "Wordzilla: "+ word.getWord() + " add meaning");
+      model.put("word", word);
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
