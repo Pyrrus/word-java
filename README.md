@@ -1,25 +1,63 @@
-# _Template_
+# Word site using spark and java
 
-#### By _Adam Gorbahn_
+## Word using OOP within Java, 9/16/16
+
+#### By **Adam Gorbahn**
 
 ## Description
+This site will make words up and make the definitions up for the each of the word. 
 
-_A template java app with support for gradle, spark and junit testing_
+## Specifications
+
+#### add pizza button
+
+user input                | output
+------------------------- | -------------
+click on 'Add Pizza' button | output the pizza number (mean how many pizza object) button, and remove pizza number. Edit menu to edit pizza' size and topping. Show the list of pizza with size and topping.
+
+
+#### pizza number (mean how many pizza object) button
+
+user input                   | output
+-------------------------    | -------------
+click on pizza number button | Output edit menu for the pizza' size and topping. Also, can switch to any pizza object was made by the add pizza button. show the edit menu for the pizza.
+
+#### Remove Pizza number (mean how many pizza object)
+
+user input                          | output
+----------------------------------- | -------------
+click on remove pizza number button | Remove the that pizza from the array and delete object. Hide the edit menu for pizza. Update the list of pizza with size and topping.
+
+#### radio tag
+
+user input         | output
+-------------------| -------------
+click on radio tag | It will change the size of the pizza object by the user input. user click on the medium radio tag. it will update the pizza object and the update the cost page.
+
+#### checkbox tag
+
+user input        | output
+----------------- | -------------
+click on checkbox | When check the program will add topping to topping array within the pizza object. When uncheck will remove topping in the pizza object. both will update the cost page.
 
 ## Setup/Installation Requirements
 
-* _Copy the repository from GitHub_
-* _Open in code editor of your choice_
-* _Make sure you have gradle installed!_
-* _gradle will download and install junit and spark_
+* Just need a web browser
 
+## Technologies Used
 
-## GitHub link
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+* Jquery
 
+## Link
 
+http://pyrrus.github.io/pizza-oop
 
-## Licensing
+### License
 
-* MIT
+*GPL*
 
-Copyright (c) 2016 **_Adam Gorbahn_**
+Copyright (c) 2016 **Adam Gorbahn**
