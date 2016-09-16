@@ -16,6 +16,7 @@ public class App {
       model.put("template", "templates/index.vtl");
       model.put("title", "Wordzilla");
       model.put("header", header);
+      model.put("css", "");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -25,6 +26,7 @@ public class App {
       model.put("title", "Wordzilla: Word List");
       model.put("words", Word.all());
       model.put("header", header);
+      model.put("css", "..");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -37,6 +39,7 @@ public class App {
       Word word = new Word(name);
       model.put("post", "yes");
       model.put("header", header);
+      model.put("css", "..");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
     
@@ -45,6 +48,7 @@ public class App {
       model.put("template", "templates/word-new-form.vtl");
       model.put("title", "Add new word for Wordzilla");
       model.put("header", header);
+      model.put("css", "..");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -54,6 +58,7 @@ public class App {
       model.put("template", "templates/word-info.vtl");
       model.put("title", "Wordzilla: "+ word.getWord() + " meaning");
       model.put("word", word);
+      model.put("css", "..");
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
@@ -64,6 +69,22 @@ public class App {
       model.put("template", "templates/word-info-new.vtl");
       model.put("title", "Wordzilla: "+ word.getWord() + " add meaning");
       model.put("word", word);
+      model.put("css", "../../");
+      model.put("header", header);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/word/:id", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      Word word = Word.find(Integer.parseInt(request.params(":id")));
+      String meaning = request.queryParams("info");
+      System.out.println(meaning);
+      Definition info = new Definition(meaning);
+      word.addDefinition(info);
+      model.put("template", "templates/word-info.vtl");
+      model.put("title", "Wordzilla: "+ word.getWord() + " meaning");
+      model.put("word", word);
+      model.put("css", "../../");
       model.put("header", header);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());

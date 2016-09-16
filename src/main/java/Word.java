@@ -10,7 +10,7 @@ public class Word {
   public Word(String word) {
   	mWord = word;
   	mDefinition = new ArrayList<Definition>();
-	words.add(this);
+	  words.add(this);
     mId = words.size();
   }
 
