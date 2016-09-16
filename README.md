@@ -9,52 +9,42 @@ This site will make words up and make the definitions up for the each of the wor
 
 ## Specifications
 
-#### add pizza button
+#### /word/new page
 
 user input                | output
 ------------------------- | -------------
-click on 'Add Pizza' button | output the pizza number (mean how many pizza object) button, and remove pizza number. Edit menu to edit pizza' size and topping. Show the list of pizza with size and topping.
+Type in the word text fields | giving word by the user in the input tag
+
+user input                | output
+------------------------- | -------------
+click on the "submit" button | This will make the word given by the user. The site will send them to the "/word" page. Also, site will give the successfully save and add it in the list of words.
 
 
-#### pizza number (mean how many pizza object) button
+#### /word/:id/new page (:id for the what word you are working on) for example /word/1/new for example
 
-user input                   | output
--------------------------    | -------------
-click on pizza number button | Output edit menu for the pizza' size and topping. Also, can switch to any pizza object was made by the add pizza button. show the edit menu for the pizza.
+user input                | output
+------------------------- | -------------
+Type in the grammar and Definition text fields. | giving words by the user in the input tags
 
-#### Remove Pizza number (mean how many pizza object)
-
-user input                          | output
------------------------------------ | -------------
-click on remove pizza number button | Remove the that pizza from the array and delete object. Hide the edit menu for pizza. Update the list of pizza with size and topping.
-
-#### radio tag
-
-user input         | output
--------------------| -------------
-click on radio tag | It will change the size of the pizza object by the user input. user click on the medium radio tag. it will update the pizza object and the update the cost page.
-
-#### checkbox tag
-
-user input        | output
------------------ | -------------
-click on checkbox | When check the program will add topping to topping array within the pizza object. When uncheck will remove topping in the pizza object. both will update the cost page.
+user input                | output
+------------------------- | -------------
+click on the "submit" button | This will make the definition with grammar given by the user add it to the word. the site will send them to the "/word/:id" page. Also, will give the successfully save and add in the list of Definition for the word.
 
 ## Setup/Installation Requirements
 
-* Just need a web browser
+* need java, gradle and Spark.
 
 ## Technologies Used
 
 * HTML
-* CSS
-* Bootstrap
-* JavaScript
-* Jquery
+* Java
+* Spark
+* Juint
+* Gradle
 
 ## Link
 
-http://pyrrus.github.io/pizza-oop
+https://floating-chamber-76963.herokuapp.com/
 
 ### License
 
